@@ -425,6 +425,15 @@ body.ia-page {
     .ia-capabilities-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+    .ia-hero-content {
+        text-align: center;
+    }
+    .ia-hero-content p {
+        margin: 0 auto 2.5rem;
+    }
+    .ia-hero-buttons {
+        justify-content: center;
+    }
 }
 
 @media (max-width: 768px) {
