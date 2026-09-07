@@ -1,0 +1,245 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const seoSchema = {
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "name": "Contacto | Grova",
+  "url": "https://grova.com.ar/contacto",
+  "description": "Contactanos para empezar a trabajar juntos en el crecimiento de tu negocio digital.",
+  "mainEntity": {
+    "@type": "Organization",
+    "name": "Grova",
+    "email": "hola@grova.com.ar",
+    "telephone": "+54 9 3516 76-2644",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Córdoba",
+      "addressCountry": "AR"
+    },
+    "url": "https://grova.com.ar"
+  }
+};
+---
+
+<Layout
+  title="Contacto | Grova"
+  description="Contactanos para empezar a trabajar juntos. E-commerce, analítica y desarrollo de plataformas."
+  activePage="contacto"
+  schema={seoSchema}
+>
+  <div class="contact-page">
+    <section class="section contact-landing-section">
+      <div class="container">
+        <div class="contact-header text-left">
+          <h1>Hablemos de tu negocio</h1>
+          <p>Completá el formulario y nos contactamos en menos de 24 horas.</p>
+        </div>
+        
+        <div class="contact-split-layout">
+          <!-- Left Column: Form -->
+          <div class="contact-form-wrapper">
+            <!-- Formspree Endpoint vinculado a hola.grova@gmail.com -->
+            <form id="contactForm" class="contact-form" action="https://formspree.io/f/xkjnqwpa" method="POST">
+              <div class="form-group">
+                <label for="name">Nombre Completo *</label>
+                <input type="text" id="name" name="name" required placeholder="Escribí tu nombre completo">
+              </div>
+              
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="email">Email *</label>
+                  <input type="email" id="email" name="email" required placeholder="tu@email.com">
+                </div>
+                <div class="form-group">
+                  <label for="phone">WhatsApp / Teléfono *</label>
+                  <input type="tel" id="phone" name="phone" required placeholder="+54 9 11 ...">
+                </div>
+              </div>
+              
+              <div class="form-group">
+                <label for="situation">Situación actual *</label>
+                <select id="situation" name="situation" required>
+                  <option value="" disabled selected>Seleccioná una opción</option>
+                  <option value="starting">Recién empezando</option>
+                  <option value="selling">Ya vendo, quiero escalar</option>
+                  <option value="agency">Busco equipo externo</option>
+                </select>
+              </div>
+
+              <!-- 4. Campo de Servicio con las opciones solicitadas -->
+              <div class="form-group">
+                <label for="service">Servicio *</label>
+                <select id="service" name="service" required>
+                  <option value="" disabled selected>Seleccioná un servicio</option>
+                  <option value="ecommerce">Ecommerce</option>
+                  <option value="sitio_institucional">Sitio web institucional</option>
+                  <option value="plataforma_medida">Plataforma a medida</option>
+                  <option value="analitica_digital">Analítica digital</option>
+                  <option value="acompanamiento_soporte">Acompañamiento y soporte</option>
+                </select>
+              </div>
+              
+              <!-- 2. Mensaje obligatorio -->
+              <div class="form-group">
+                <label for="message">Mensaje *</label>
+                <textarea id="message" name="message" rows="4" required placeholder="Contanos brevemente sobre tu proyecto o necesidad..."></textarea>
+              </div>
+
+              <!-- 3. Google reCAPTCHA v2 Checkbox -->
+              <div class="form-group" style="margin-bottom: 1.5rem; display: flex; flex-direction: column;">
+                <div class="g-recaptcha" data-sitekey="6LdCwq0tAAAAAH6_4SQ-tp-dNYbkyDXtk671xstN"></div>
+                <span id="captcha-error" class="captcha-error hidden" style="color: #dc2626; font-size: 0.85rem; margin-top: 0.5rem;">
+                  Por favor, marcá la casilla de verificación de reCAPTCHA.
+                </span>
+              </div>
+              
+              <button type="submit" class="btn btn-primary btn-submit">Enviar consulta</button>
+              <p class="form-note">Al enviar aceptás nuestra política de privacidad.</p>
+              
+              <div id="form-success" class="form-success hidden">
+                ¡Gracias por tu mensaje! Nos pondremos en contacto a la brevedad.
+              </div>
+              <div id="form-error" class="form-error hidden" style="margin-top: 1rem; padding: 1rem; background-color: #FEE2E2; color: #991B1B; border-radius: var(--radius-sm); text-align: center; font-size: 0.9rem;">
+                Hubo un inconveniente al enviar tu consulta. Podés escribirnos directamente por WhatsApp o a hola@grova.com.ar.
+              </div>
+            </form>
+          </div>
+
+          <!-- Right Column: Info -->
+          <div class="contact-info-wrapper">
+            <h3>Canales directos</h3>
+            
+            <div class="direct-channel">
+              <div class="channel-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              </div>
+              <div class="channel-text">
+                <span class="label">Email</span>
+                <a href="mailto:hola@grova.com.ar" class="value" style="color: inherit; text-decoration: none;">hola@grova.com.ar</a>
+              </div>
+            </div>
+
+            <!-- 5. WhatsApp con número y link directo -->
+            <div class="direct-channel">
+              <div class="channel-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+              </div>
+              <div class="channel-text">
+                <span class="label">WhatsApp</span>
+                <a href="https://wa.link/7361jz" target="_blank" rel="noopener noreferrer" class="value" style="color: inherit; text-decoration: none;">
+                  Enviar mensaje directo
+                </a>
+                <a href="https://wa.link/7361jz" target="_blank" rel="noopener noreferrer" style="font-size: 0.9rem; color: var(--primary); font-weight: 600; text-decoration: none; margin-top: 2px;">
+                  +54 9 3516 76-2644
+                </a>
+              </div>
+            </div>
+
+            <!-- 6. Geolocalización: Córdoba, Argentina -->
+            <div class="direct-channel">
+              <div class="channel-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+              </div>
+              <div class="channel-text">
+                <span class="label">Ubicación</span>
+                <span class="value">Córdoba, Argentina.</span>
+              </div>
+            </div>
+
+            <!-- 7. Redes sociales: Solo Instagram y LinkedIn -->
+            <h3 class="mt-4">Seguinos</h3>
+            <div class="social-links-light">
+              <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+              </a>
+              <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                  <rect x="2" y="9" width="4" height="12"></rect>
+                  <circle cx="4" cy="4" r="2"></circle>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</Layout>
+
+<!-- Script oficial de Google reCAPTCHA -->
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+<script>
+  // Form Handling con validación de reCAPTCHA
+  const contactForm = document.getElementById('contactForm') as HTMLFormElement | null;
+  const formSuccess = document.getElementById('form-success');
+  const formError = document.getElementById('form-error');
+  const captchaError = document.getElementById('captcha-error');
+
+  if (contactForm) {
+    contactForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      // Verificar respuesta de reCAPTCHA si está cargado y no estamos en localhost
+      const win = window as any;
+      const isLocalhost = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+      if (!isLocalhost && typeof win.grecaptcha !== 'undefined') {
+        const captchaResponse = win.grecaptcha.getResponse();
+        if (!captchaResponse) {
+          if (captchaError) captchaError.classList.remove('hidden');
+          return;
+        } else {
+          if (captchaError) captchaError.classList.add('hidden');
+        }
+      }
+
+      const submitBtn = contactForm.querySelector('.btn-submit') as HTMLButtonElement | null;
+      if (!submitBtn) return;
+      const originalText = submitBtn.textContent;
+
+      submitBtn.textContent = 'Enviando consulta...';
+      submitBtn.disabled = true;
+
+      const formData = new FormData(contactForm);
+
+      try {
+        const response = await fetch(contactForm.action, {
+          method: 'POST',
+          body: formData,
+          headers: {
+            'Accept': 'application/json'
+          }
+        });
+
+        if (response.ok) {
+          contactForm.reset();
+          if (typeof win.grecaptcha !== 'undefined') {
+            win.grecaptcha.reset();
+          }
+          if (formSuccess) formSuccess.classList.remove('hidden');
+          if (formError) formError.classList.add('hidden');
+
+          setTimeout(() => {
+            if (formSuccess) formSuccess.classList.add('hidden');
+          }, 8000);
+        } else {
+          if (formError) formError.classList.remove('hidden');
+        }
+      } catch (err) {
+        if (formError) formError.classList.remove('hidden');
+      } finally {
+        submitBtn.textContent = originalText;
+        submitBtn.disabled = false;
+      }
+    });
+  }
+</script>

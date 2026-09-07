@@ -1,0 +1,16 @@
+{
+  "name": "grova-landing",
+  "version": "1.0.0",
+  "description": "Sitio web oficial de Grova",
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "@astrojs/sitemap": "^3.7.4",
+    "astro": "^7.3.1"
+  }
+}

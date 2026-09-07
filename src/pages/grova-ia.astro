@@ -1,0 +1,215 @@
+---
+import Layout from '../layouts/Layout.astro';
+import '../styles/ia-landing.css';
+
+const seoSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Grova IA",
+  "serviceType": "Inteligencia Artificial y Automatización Empresarial",
+  "provider": {
+    "@type": "Organization",
+    "name": "Grova",
+    "url": "https://grova.com.ar"
+  },
+  "description": "El orquestador de IA para tu empresa. Automatizamos procesos, atención al cliente y operaciones con inteligencia artificial conectada a tu negocio.",
+  "offers": {
+    "@type": "Offer",
+    "availability": "https://schema.org/InStock",
+    "url": "https://grova.com.ar/contacto"
+  }
+};
+---
+
+<Layout
+  title="Grova IA | El orquestador de IA para tu empresa"
+  description="Mucho más que un chatbot. Un ecosistema inteligente que conecta canales, interpreta intenciones y ejecuta tareas operativas de forma 100% autónoma."
+  bodyClass="ia-page"
+  activePage="grova-ia"
+  schema={seoSchema}
+>
+  <!-- Hero Section -->
+  <section class="ia-hero">
+    <div class="container ia-hero-container">
+      <div class="ia-hero-content">
+        <h1>El orquestador de IA que tu empresa necesita.</h1>
+        <p>Mucho más que un chatbot. Un ecosistema inteligente que conecta canales, interpreta intenciones y ejecuta tareas operativas de forma 100% autónoma.</p>
+        <div class="ia-hero-buttons">
+          <a href="/contacto" class="btn btn-primary">Pedir Demo &rarr;</a>
+          <a href="#funcionamiento" class="btn btn-ghost-dark">Ver funcionamiento <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 16 16 12 12 8"></polyline><line x1="8" y1="12" x2="16" y2="12"></line></svg></a>
+        </div>
+      </div>
+      <div class="ia-hero-visual">
+        <div class="ia-mockup-dark">
+          <div class="mockup-header">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+          <div class="mockup-body">
+            <div class="skeleton-line-thick"></div>
+            <div class="skeleton-line"></div>
+            <div class="skeleton-line short"></div>
+            <div class="mockup-chat-bubbles">
+              <div class="chat-bubble right"></div>
+              <div class="chat-bubble left"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rigidez Comparison Section -->
+  <section class="ia-section ia-section-light text-center">
+    <div class="container">
+      <span class="ia-eyebrow">EL PARADIGMA ACTUAL</span>
+      <h2>Dejá atrás la rigidez.</h2>
+      
+      <div class="ia-comparison-grid">
+        <!-- Humana -->
+        <div class="ia-card">
+          <div class="ia-card-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><line x1="19" y1="8" x2="23" y2="12"></line><line x1="23" y1="8" x2="19" y2="12"></line></svg>
+          </div>
+          <h3>Atención Humana</h3>
+          <p>Costosa, lenta y difícil de escalar. Los tiempos de espera matan la conversión de tus clientes.</p>
+          <ul class="ia-list ia-list-negative">
+            <li>Limitada a horario comercial</li>
+            <li>Error humano recurrente</li>
+          </ul>
+        </div>
+
+        <!-- Grova IA -->
+        <div class="ia-card highlight">
+          <div class="ia-card-icon">
+            <strong>Grova IA</strong>
+          </div>
+          <h3>El equilibrio perfecto</h3>
+          <p>La velocidad del software con la inteligencia y capacidad de resolución de un humano.</p>
+          <ul class="ia-list ia-list-positive">
+            <li>100% Autónomo</li>
+            <li>Integrado a tu stack</li>
+          </ul>
+        </div>
+
+        <!-- Chatbots Rígidos -->
+        <div class="ia-card">
+          <div class="ia-card-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"></rect><circle cx="12" cy="5" r="2"></circle><path d="M12 7v4"></path><line x1="8" y1="16" x2="8" y2="16"></line><line x1="16" y1="16" x2="16" y2="16"></line></svg>
+          </div>
+          <h3>Chatbots Rígidos</h3>
+          <p>Basados en reglas que frustran al usuario. Si no dice la palabra exacta, el bot no entiende.</p>
+          <ul class="ia-list ia-list-negative">
+            <li>"No entiendo tu pregunta"</li>
+            <li>Sin capacidad de acción</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Director de Orquesta Section -->
+  <section id="funcionamiento" class="ia-section ia-section-gray">
+    <div class="container ia-orchestrator-container">
+      <div class="ia-orchestrator-content">
+        <span class="ia-eyebrow">EL DIFERENCIAL</span>
+        <h2>Un Director de Orquesta para tu operación.</h2>
+        <p>Grova no solo conversa: EJECUTA. Entiende la intención profunda del cliente y coordina todas tus herramientas para cerrar la transacción en segundos.</p>
+        
+        <div class="ia-feature-list">
+          <div class="ia-feature-item">
+            <div class="ia-feature-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+            </div>
+            <div>
+              <h4>Comprensión Semántica</h4>
+              <p>Interpreta lenguaje natural, modismos y contextos complejos.</p>
+            </div>
+          </div>
+          <div class="ia-feature-item">
+            <div class="ia-feature-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+            </div>
+            <div>
+              <h4>Consulta de Inventario Real</h4>
+              <p>Se comunica con tu ERP o Base de Datos en tiempo real.</p>
+            </div>
+          </div>
+          <div class="ia-feature-item">
+            <div class="ia-feature-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg>
+            </div>
+            <div>
+              <h4>Cierre de Venta</h4>
+              <p>Genera links de pago y confirma transacciones al instante.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ia-orchestrator-visual">
+        <div class="ia-chat-widget">
+          <div class="chat-message user">
+            <p>"Hola, ¿tienen Omeprazol? Necesito 2 cajas urgente."</p>
+          </div>
+          <div class="chat-message system">
+            <p><strong>Grova Processing...</strong><br>Entendido. Consultando stock... Hay disponibilidad. Generando link de pago por 2 unidades.</p>
+          </div>
+          <div class="chat-data-chips">
+            <span class="chip success">Stock: Exitoso</span>
+            <span class="chip info">Intent: Compra</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Capacidades sin límites Section -->
+  <section class="ia-section ia-section-light text-center">
+    <div class="container">
+      <h2>Capacidades operativas sin límites.</h2>
+      
+      <div class="ia-capabilities-grid">
+        <div class="ia-cap-card">
+          <div class="ia-cap-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+          </div>
+          <h4>Respuestas Automáticas</h4>
+          <p>Recepción y respuesta de consultas 24/7 sin necesidad de atención humana.</p>
+        </div>
+        <div class="ia-cap-card">
+          <div class="ia-cap-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg>
+          </div>
+          <h4>Cobros Integrados</h4>
+          <p>Conexión directa con Mercado Pago, Stripe y las principales pasarelas.</p>
+        </div>
+        <div class="ia-cap-card">
+          <div class="ia-cap-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+          </div>
+          <h4>Agendamiento</h4>
+          <p>Gestión inteligente de turnos y sincronización con calendarios operativos.</p>
+        </div>
+        <div class="ia-cap-card">
+          <div class="ia-cap-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+          </div>
+          <h4>Data Real-Time</h4>
+          <p>Actualización constante en tus bases de datos y CRM a las 24 horas.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Final -->
+  <section class="ia-section ia-section-gray">
+    <div class="container">
+      <div class="ia-bottom-cta">
+        <h2>Incorporá la IA en tu negocio.</h2>
+        <p>Sumate a la nueva era de la automatización inteligente.<br>Escalá sin aumentar tus costos operativos.</p>
+        <a href="/contacto" class="btn btn-dark">Empezar ahora <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+      </div>
+    </div>
+  </section>
+</Layout>

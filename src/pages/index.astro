@@ -1,0 +1,470 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const seoSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://grova.com.ar/#organization",
+      "name": "Grova",
+      "url": "https://grova.com.ar",
+      "email": "hola@grova.com.ar",
+      "description": "Desarrollo web, e-commerce, analítica digital y acompañamiento continuo para empresas que quieren crecer con certezas.",
+      "sameAs": [
+        "https://www.instagram.com/",
+        "https://www.linkedin.com/"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://grova.com.ar/#website",
+      "url": "https://grova.com.ar",
+      "name": "Grova",
+      "publisher": {
+        "@id": "https://grova.com.ar/#organization"
+      },
+      "inLanguage": "es-AR"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://grova.com.ar/#webpage",
+      "url": "https://grova.com.ar",
+      "name": "Grova | Sitios y plataformas que crecen con datos",
+      "isPartOf": {
+        "@id": "https://grova.com.ar/#website"
+      },
+      "about": {
+        "@id": "https://grova.com.ar/#organization"
+      },
+      "description": "Desarrollamos tiendas online, sitios web y sistemas a medida que funcionan. Sumamos analítica digital y acompañamiento continuo para que tomes decisiones rentables."
+    }
+  ]
+};
+---
+
+<Layout
+  title="Grova | Sitios y plataformas que crecen con datos"
+  description="Desarrollamos tiendas online, sitios web y sistemas a medida que no solo se ven bien, sino que funcionan. Sumamos analítica digital y acompañamiento continuo."
+  activePage="inicio"
+  schema={seoSchema}
+>
+  <!-- 2. Hero Section -->
+  <section id="inicio" class="hero hero-light">
+    <div class="container hero-container-light">
+      <div class="hero-content-light">
+        <h1>Creamos sitios y <br>plataformas que <br><em class="text-primary italic">crecen con datos.</em></h1>
+        <p>Desarrollamos tiendas online, sitios web y sistemas a medida que no solo se ven bien, sino que funcionan. Nuestro secreto: sumamos analítica digital desde el primer día para que tomes decisiones rentables y dejes de adivinar.</p>
+        <div class="hero-buttons">
+          <a href="/contacto" class="btn btn-primary">Hablemos de tu proyecto</a>
+          <a href="#servicios" class="btn btn-light">Ver qué hacemos</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Problema / Oportunidad -->
+  <section class="section problem-section">
+    <div class="container problem-container">
+      <div class="problem-content">
+        <p class="lead-text">Tener una página web ya no alcanza. Necesitás un ecosistema digital preparado para medir y mejorar.</p>
+        <p class="sub-text">Muchas empresas tienen sitios que no reflejan su valor, tiendas que no venden lo que deberían, o sistemas que no se hablan entre sí. Pero lo más grave es que invierten y toman decisiones a ciegas, sin saber realmente qué acciones traen resultados.</p>
+      </div>
+      <div class="solution-highlight">
+        <h2>En Grova unimos desarrollo web y analítica digital para construir sitios y plataformas claras, eficientes y pensadas para tu negocio.</h2>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Propuesta de Valor (Los 3 pilares) -->
+  <section class="section value-prop-section">
+    <div class="container">
+      <h2 class="section-title text-center">Desarrollá, medí y crecé sin dar pasos en falso.</h2>
+      <div class="value-grid">
+        <div class="value-card">
+          <div class="icon-box">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+              <polyline points="2 17 12 22 22 17"></polyline>
+              <polyline points="2 12 12 17 22 12"></polyline>
+            </svg>
+          </div>
+          <h3>Construí</h3>
+          <p>Sitios institucionales, e-commerce y plataformas a la medida de lo que tu empresa necesita.</p>
+        </div>
+
+        <div class="value-card">
+          <div class="icon-box">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="18" y1="20" x2="18" y2="10"></line>
+              <line x1="12" y1="20" x2="12" y2="4"></line>
+              <line x1="6" y1="20" x2="6" y2="14"></line>
+            </svg>
+          </div>
+          <h3>Medí</h3>
+          <p>Tableros claros y métricas integradas para entender qué pasa con tus usuarios y tus ventas.</p>
+        </div>
+
+        <div class="value-card">
+          <div class="icon-box">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+              <polyline points="17 6 23 6 23 12"></polyline>
+            </svg>
+          </div>
+          <h3>Decidí</h3>
+          <p>Datos precisos que se transforman en estrategias para hacer crecer tu negocio.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Servicios / Soluciones -->
+  <section id="servicios" class="section services-section">
+    <div class="container">
+      <h2 class="section-title text-center">Nuestras Soluciones</h2>
+      <div class="services-grid">
+        <!-- Tarjeta 1: E-commerce -->
+        <div class="service-card highlight-card">
+          <div class="service-header">
+            <h3>Grova E-commerce</h3>
+          </div>
+          <div class="service-body">
+            <p class="service-desc">Diseñamos y desarrollamos tiendas online preparadas para vender y escalar de forma sólida.</p>
+            <ul class="service-features">
+              <li>Shopify, Tiendanube y WooCommerce</li>
+              <li>Experiencia de compra (UX) fluida</li>
+              <li>Configuración de envíos y pagos</li>
+              <li>Optimización de carritos y conversión</li>
+            </ul>
+          </div>
+          <div class="service-footer">
+            <a href="/contacto" class="btn btn-primary w-100">Quiero vender Online</a>
+          </div>
+        </div>
+
+        <!-- Tarjeta 2: Sitios y Plataformas a Medida -->
+        <div class="service-card highlight-card">
+          <div class="service-header">
+            <h3>Sitios y Plataformas a Medida</h3>
+          </div>
+          <div class="service-body">
+            <p class="service-desc">Desde webs institucionales que transmiten confianza hasta sistemas personalizados para resolver procesos internos.</p>
+            <ul class="service-features">
+              <li>Sitios web corporativos</li>
+              <li>Plataformas y portales a medida</li>
+              <li>Diseño enfocado en el usuario (UX/UI)</li>
+              <li>Integraciones con otros sistemas</li>
+            </ul>
+          </div>
+          <div class="service-footer">
+            <a href="/contacto" class="btn btn-primary w-100">Necesito un desarrollo</a>
+          </div>
+        </div>
+
+        <!-- Tarjeta 3: Analítica Digital (Diferencial) -->
+        <div class="service-card highlight-card">
+          <div class="service-header">
+            <h3>Analítica Digital</h3>
+          </div>
+          <div class="service-body">
+            <p class="service-desc">Implementamos la medición en tu web o tienda para que entiendas el comportamiento de tus usuarios y el retorno de tu inversión.</p>
+            <ul class="service-features">
+              <li>Google Analytics 4 (GA4) y Tag Manager</li>
+              <li>Tableros visuales en Looker Studio</li>
+              <li>Seguimiento de clics, eventos y conversiones</li>
+              <li>Mapas de calor de tus usuarios</li>
+            </ul>
+          </div>
+          <div class="service-footer">
+            <a href="/contacto" class="btn btn-primary w-100">Quiero potenciar mis ventas</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Ecosistema Integral -->
+  <section class="section ecosystem-section">
+    <div class="container ecosystem-container">
+      <div class="ecosystem-content">
+        <h2>El poder de los datos a tu favor</h2>
+        <p>Un buen sitio web o tienda online es solo el primer paso. El verdadero salto ocurre cuando le sumamos analítica digital: entendemos cómo interactúan tus clientes, qué buscan y dónde se traban. Usamos esa información para ajustar, mejorar la experiencia y hacer crecer tu negocio basándonos en certezas, no en suposiciones.</p>
+      </div>
+      <div class="ecosystem-visual">
+        <div class="ecosystem-formula-box">
+          <div class="formula-item">
+            <div class="formula-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                <line x1="8" y1="21" x2="16" y2="21"></line>
+                <line x1="12" y1="17" x2="12" y2="21"></line>
+              </svg>
+            </div>
+            <div class="formula-text">
+              <h4>Desarrollo Web & E-commerce</h4>
+              <p>Plataformas sólidas, veloces y diseñadas para convertir.</p>
+            </div>
+          </div>
+
+          <div class="formula-separator">+</div>
+
+          <div class="formula-item">
+            <div class="formula-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="20" x2="18" y2="10"></line>
+                <line x1="12" y1="20" x2="12" y2="4"></line>
+                <line x1="6" y1="20" x2="6" y2="14"></line>
+              </svg>
+            </div>
+            <div class="formula-text">
+              <h4>Analítica Digital en Tiempo Real</h4>
+              <p>Medición clara, sin puntos ciegos ni adivinanzas.</p>
+            </div>
+          </div>
+
+          <div class="formula-separator">=</div>
+
+          <div class="formula-item formula-result">
+            <div class="formula-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                <polyline points="17 6 23 6 23 12"></polyline>
+              </svg>
+            </div>
+            <div class="formula-text">
+              <h4>Crecimiento Continuo y Rentable</h4>
+              <p>Decisiones estratégicas con retorno de inversión certero.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6.1 Nueva Sección: Acompañamiento y Mejora Continua (El Gran Diferencial) -->
+  <section id="acompanamiento" class="section support-section">
+    <div class="container support-container">
+      <div class="support-content">
+        <span class="support-badge">Tu equipo digital extendido</span>
+        <h2>No te dejamos solo después del lanzamiento.<br><em class="text-primary italic">Evolucionamos tu sitio con vos.</em></h2>
+        <p class="support-lead">
+          Crear una web o tienda es solo el puntapié inicial. El verdadero éxito viene de la mejora continua: analizamos los datos mes a mes, detectamos oportunidades y te acercamos propuestas proactivas y soporte técnico permanente para que tu plataforma nunca quede desactualizada.
+        </p>
+
+        <div class="support-pillars">
+          <div class="support-pillar-item">
+            <div class="support-pillar-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"></path>
+              </svg>
+            </div>
+            <div class="support-pillar-text">
+              <h4>Propuestas Proactivas de Optimización</h4>
+              <p>No esperamos a que algo falle. Miramos la analítica para sugerirte mejoras en diseño, velocidad y conversión.</p>
+            </div>
+          </div>
+
+          <div class="support-pillar-item">
+            <div class="support-pillar-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+              </svg>
+            </div>
+            <div class="support-pillar-text">
+              <h4>Soporte Técnico y Actualizaciones</h4>
+              <p>Cuidamos la estabilidad, seguridad y nuevas funcionalidades de tu tienda o plataforma sin que tengas que preocuparte por el código.</p>
+            </div>
+          </div>
+
+          <div class="support-pillar-item">
+            <div class="support-pillar-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
+            </div>
+            <div class="support-pillar-text">
+              <h4>Acompañamiento Estratégico Humano</h4>
+              <p>Un canal de comunicación directo con profesionales que conocen al detalle tu negocio y tus objetivos de venta.</p>
+            </div>
+          </div>
+        </div>
+
+        <a href="/contacto" class="btn btn-primary">Quiero un equipo que me acompañe</a>
+      </div>
+
+      <div class="support-visual">
+        <div class="support-visual-card">
+          <div class="support-card-header">
+            <div>
+              <h4 style="margin: 0; font-size: 1.1rem; color: var(--secondary);">Panel de Acompañamiento Activo</h4>
+              <span style="font-size: 0.8rem; color: var(--text-light);">Monitoreo y evolución mensual</span>
+            </div>
+            <div class="support-status">
+              <span class="status-dot"></span> Equipo Activo
+            </div>
+          </div>
+
+          <div class="support-timeline">
+            <div class="timeline-event">
+              <span class="event-badge analytics">Analítica</span>
+              <div class="event-info">
+                <h5>Detección en embudo de pago</h5>
+                <p>Identificamos un 18% de abandono en el checkout móvil y optimizamos la experiencia.</p>
+              </div>
+            </div>
+
+            <div class="timeline-event">
+              <span class="event-badge proactive">Mejora Proactiva</span>
+              <div class="event-info">
+                <h5>Nueva funcionalidad implementada</h5>
+                <p>Incorporamos selector rápido de cuotas y banners estacionales sugeridos por Grova.</p>
+              </div>
+            </div>
+
+            <div class="timeline-event">
+              <span class="event-badge analytics">Soporte & Salud</span>
+              <div class="event-info">
+                <h5>Velocidad y seguridad 100% al día</h5>
+                <p>Actualización de módulos y optimización de carga para mantener Core Web Vitals en verde.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. Método de Trabajo -->
+  <section id="metodo" class="section method-section">
+    <div class="container">
+      <h2 class="section-title text-center">Cómo trabajamos juntos</h2>
+      <div class="method-grid">
+        <div class="method-step">
+          <span class="step-number">01</span>
+          <h3>Diagnóstico</h3>
+          <p>Nos sentamos con vos para entender tu negocio, qué necesitás resolver y cómo estás posicionado hoy.</p>
+        </div>
+        <div class="method-step">
+          <span class="step-number">02</span>
+          <h3>Estrategia y Diseño</h3>
+          <p>Definimos qué tipo de sitio, tienda o plataforma es la ideal y planificamos qué métricas vamos a seguir.</p>
+        </div>
+        <div class="method-step">
+          <span class="step-number">03</span>
+          <h3>Desarrollo</h3>
+          <p>Programamos, diseñamos e integramos todas las herramientas para que tu plataforma cobre vida.</p>
+        </div>
+        <div class="method-step">
+          <span class="step-number">04</span>
+          <h3>Medición y Optimización</h3>
+          <p>Lanzamos el proyecto con la analítica conectada. Empezamos a medir resultados para detectar oportunidades y mejorar mes a mes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. Diferencial -->
+  <section class="section differentiator-section">
+    <div class="container">
+      <div class="diff-header text-center">
+        <h2>No hacemos "páginas web".<br>Construimos activos digitales.</h2>
+      </div>
+      <div class="diff-grid">
+        <div class="diff-card">
+          <div class="diff-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="18" y1="20" x2="18" y2="10"></line>
+              <line x1="12" y1="20" x2="12" y2="4"></line>
+              <line x1="6" y1="20" x2="6" y2="14"></line>
+            </svg>
+          </div>
+          <p>Nos apasionan los datos: no damos un paso sin poder medirlo.</p>
+        </div>
+
+        <div class="diff-card">
+          <div class="diff-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"></path>
+              <line x1="12" y1="6" x2="12" y2="8"></line>
+              <line x1="12" y1="16" x2="12" y2="18"></line>
+            </svg>
+          </div>
+          <p>Pensamos cada solución desde la rentabilidad de tu negocio, no solo desde la estética.</p>
+        </div>
+
+        <div class="diff-card">
+          <div class="diff-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polygon points="12 8 8 12 12 16 16 12 12 8"></polygon>
+            </svg>
+          </div>
+          <p>Combinamos una mirada estratégica, comercial y técnica.</p>
+        </div>
+
+        <div class="diff-card">
+          <div class="diff-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="22 7 13.5 15.5 8.5 10.5 1 18"></polyline>
+              <polyline points="16 7 22 7 22 13"></polyline>
+            </svg>
+          </div>
+          <p>Desarrollamos soluciones escalables que pueden crecer al ritmo de tu empresa.</p>
+        </div>
+
+        <div class="diff-card">
+          <div class="diff-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+            </svg>
+          </div>
+          <p>Hablamos tu idioma: te mostramos los datos de forma simple y clara.</p>
+        </div>
+
+        <div class="diff-card">
+          <div class="diff-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+              <line x1="9" y1="3" x2="9" y2="21"></line>
+            </svg>
+          </div>
+          <p>Integramos herramientas reales y escalables.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. Cliente Ideal -->
+  <section class="section ideal-client-section">
+    <div class="container">
+      <h2 class="section-title text-center">Grova es para tu empresa si...</h2>
+      <div class="client-grid">
+        <div class="client-item">
+          <span class="check-icon">✓</span>
+          <p>Querés lanzar o modernizar tu tienda online o web institucional.</p>
+        </div>
+        <div class="client-item">
+          <span class="check-icon">✓</span>
+          <p>Necesitás una plataforma o sistema a medida para mejorar un proceso de tu negocio.</p>
+        </div>
+        <div class="client-item">
+          <span class="check-icon">✓</span>
+          <p>Tenés presencia digital, pero sentís que estás "volando a ciegas" y no sabés qué funciona.</p>
+        </div>
+        <div class="client-item">
+          <span class="check-icon">✓</span>
+          <p>Querés tableros de métricas claros para tomar decisiones sin depender de la intuición.</p>
+        </div>
+        <div class="client-item">
+          <span class="check-icon">✓</span>
+          <p>Buscás un equipo técnico que también entienda de ventas y estrategia comercial.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

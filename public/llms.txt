@@ -1,0 +1,35 @@
+# Grova - Desarrollo Web, E-commerce y Analítica Digital
+
+> Sitio web oficial: https://grova.com.ar
+> Contacto: hola@grova.com.ar
+
+## Descripción General
+En Grova creamos sitios web, tiendas online y plataformas a medida que crecen con datos. No hacemos simples páginas web: construimos activos digitales pensados desde la rentabilidad y la estrategia comercial de tu empresa, integrando analítica digital desde el primer día para que tomes decisiones certeras y dejes de adivinar.
+
+## Soluciones y Servicios Principales
+
+### 1. Grova E-commerce
+Diseño y desarrollo de tiendas online preparadas para vender y escalar de forma sólida:
+- Plataformas: Shopify, Tiendanube, WooCommerce.
+- Experiencia de compra (UX) fluida y optimización de carritos y conversión.
+- Configuración avanzada de medios de pago locales/internacionales y logística de envíos.
+
+### 2. Sitios y Plataformas a Medida
+Desarrollos desde webs institucionales que transmiten confianza hasta sistemas personalizados para resolver procesos internos:
+- Sitios web corporativos de alto impacto visual y rendimiento.
+- Plataformas, portales y aplicaciones web a medida.
+- Diseño enfocado en la experiencia del usuario (UX/UI).
+- Integración con bases de datos, APIs y sistemas existentes.
+
+### 3. Analítica Digital (El Diferencial Grova)
+Implementación de infraestructura de medición y visualización de datos de negocio:
+- Configuración profesional de Google Analytics 4 (GA4) y Google Tag Manager (GTM).
+- Tableros visuales interactivos en Looker Studio para entender el comportamiento y retorno de inversión.
+- Seguimiento de clics, eventos y conversiones.
+- Mapas de calor y análisis del viaje del usuario.
+
+## Método de Trabajo
+1. Diagnóstico: Entendimiento profundo de tu negocio, necesidades y posicionamiento actual.
+2. Estrategia y Diseño: Definición del tipo de plataforma ideal y arquitectura de métricas a seguir.
+3. Desarrollo: Programación, diseño e integración de herramientas.
+4. Medición y Optimización: Lanzamiento con analítica conectada y mejora continua mes a mes.

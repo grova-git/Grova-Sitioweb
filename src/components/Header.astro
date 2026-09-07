@@ -1,0 +1,70 @@
+---
+interface Props {
+  activePage?: 'inicio' | 'servicios' | 'acompanamiento' | 'metodo' | 'contacto';
+}
+
+const { activePage } = Astro.props;
+---
+
+<header class="header">
+  <div class="container header-container">
+    <a href="/" class="logo">grova<span>.</span></a>
+
+    <button class="mobile-menu-btn" aria-label="Abrir menú">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M3 12H21M3 6H21M3 18H21" stroke="var(--secondary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+
+    <nav class="main-nav">
+      <ul class="nav-links">
+        <li><a href="/#inicio" class={activePage === 'inicio' ? 'active' : ''}>Inicio</a></li>
+        <li><a href="/#servicios" class={activePage === 'servicios' ? 'active' : ''}>Servicios</a></li>
+        <li><a href="/#acompanamiento" class={activePage === 'acompanamiento' ? 'active' : ''}>Acompañamiento</a></li>
+        <li><a href="/#metodo" class={activePage === 'metodo' ? 'active' : ''}>Método</a></li>
+        <li><a href="/contacto" class={activePage === 'contacto' ? 'active' : ''}>Contacto</a></li>
+      </ul>
+    </nav>
+    <a href="/contacto" class="btn btn-primary nav-cta">Hablemos de tu proyecto</a>
+  </div>
+</header>
+
+<script>
+  // Mobile Menu Toggle
+  const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+  const mainNav = document.querySelector('.main-nav');
+
+  if (mobileMenuBtn && mainNav) {
+    mobileMenuBtn.addEventListener('click', () => {
+      mainNav.classList.toggle('active');
+    });
+
+    const navLinks = document.querySelectorAll('.nav-links a');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mainNav.classList.remove('active');
+      });
+    });
+  }
+
+  // Smooth Scroll for Anchors
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      const targetId = this.getAttribute('href');
+      if (targetId === '#' || !targetId) return;
+
+      const targetElement = document.querySelector(targetId);
+      if (targetElement) {
+        e.preventDefault();
+        const headerOffset = 80;
+        const elementPosition = targetElement.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+</script>
