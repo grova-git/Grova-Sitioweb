@@ -40,7 +40,9 @@ const seoSchema = {
           <!-- Left Column: Form -->
           <div class="contact-form-wrapper">
             <!-- Formspree Endpoint vinculado a hola.grova@gmail.com -->
-            <form id="contactForm" class="contact-form" action="https://formspree.io/f/xkjnqwpa" method="POST">
+            <form id="contactForm" class="contact-form" action="https://gestion.grova.com.ar/api/leads" method="POST">
+              <input type="hidden" name="company_id" value="grova" />
+              <input type="hidden" name="source" value="Formulario Web grova.com.ar" />
               <div class="form-group">
                 <label for="name">Nombre Completo *</label>
                 <input type="text" id="name" name="name" required placeholder="Escribí tu nombre completo">
